@@ -3,9 +3,6 @@ packages <- c("data.table", "tidyverse", "GAPIT", "GWAS.utils",
               "CMplot", "foreach", "doParallel")
 sapply(packages, require, character.only = TRUE)
 
-# Set working directory
-setwd("~/Desktop/GWAS_test")
-
 # Register parallel backend (using one less core to avoid overloading)
 nCores <- detectCores() - 1  
 cl <- makeCluster(nCores)
